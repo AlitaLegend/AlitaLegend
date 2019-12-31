@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://alitalegend.github.io/"/>
-  <updated>2019-12-31T00:14:36.594Z</updated>
+  <updated>2019-12-31T15:47:46.110Z</updated>
   <id>https://alitalegend.github.io/</id>
   
   <author>
@@ -17,25 +17,11 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>HelloWorld</title>
-    <link href="https://alitalegend.github.io/2019/12/30/helloworld/"/>
-    <id>https://alitalegend.github.io/2019/12/30/helloworld/</id>
-    <published>2019-12-30T05:48:06.000Z</published>
-    <updated>2019-12-31T00:14:36.594Z</updated>
-    
-    <summary type="html">
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
     <title>UMG屏幕适配</title>
     <link href="https://alitalegend.github.io/2018/01/22/ue01/"/>
     <id>https://alitalegend.github.io/2018/01/22/ue01/</id>
     <published>2018-01-22T04:32:09.000Z</published>
-    <updated>2019-12-31T00:14:36.595Z</updated>
+    <updated>2019-12-31T15:47:46.110Z</updated>
     
     <summary type="html">
     
@@ -43,7 +29,7 @@
       
         
         
-          &lt;h4 id=&quot;一：设计分辨率的选择&quot;&gt;&lt;a href=&quot;#一：设计分辨率的选择&quot; class=&quot;headerlink&quot;
+          &lt;h4 id=&quot;一：如何确定设计分辨率？&quot;&gt;&lt;a href=&quot;#一：如何确定设计分辨率？&quot; class=&quot;headerlink&quot; title=&quot;一：如何确定设计分辨率？&quot;&gt;&lt;/a&gt;一：如何确定设计分辨率？&lt;/h4&gt;&lt;p&gt;设计分辨率的制定主要需要考虑市场主流机型，美术画质要求, 
         
       
     
