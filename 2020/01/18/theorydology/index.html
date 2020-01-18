@@ -4,12 +4,12 @@
 
 <head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="UMG屏幕适配, GAME IOI">
+    <meta name="keywords" content="认知方法论, GAME IOI">
     <meta name="baidu-site-verification" content="NsVyO3a7PL">
     <meta name="google-site-verification" content="googled912e925d9bac9bd.html">
     <meta name="360-site-verification" content>
-    <meta name="description" content="一：如何确定设计分辨率？设计分辨率的制定主要需要考虑市场主流机型，美术画质要求,  设计资源占用的内存；根据Tecent移动统计, 2019.12月份Android和IOS的主流机型的物理分辨率如图所示
- |  图一   |  最小分辨率 ">
+    <meta name="description" content="
+">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -17,7 +17,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>UMG屏幕适配 | Alita Legend</title>
+    <title>认知方法论 | Alita Legend</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -291,13 +291,13 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/26.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/9.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        UMG屏幕适配
+                        认知方法论
                     </div>
                 </div>
             </div>
@@ -407,24 +407,11 @@
                 <div class="col s7">
                     
                     <div class="article-tag">
-                        
-                        <a href="/tags/随笔/" target="_blank">
-                            <span class="chip bg-color">随笔</span>
-                        </a>
-                        
+                        <span class="chip bg-color">无标签</span>
                     </div>
                     
                 </div>
                 <div class="col s5 right-align">
-                    
-                    <div class="post-cate">
-                        <i class="fa fa-bookmark fa-fw icon-category"></i>
-                        
-                        <a href="/categories/随笔/" class="post-category" target="_blank">
-                            随笔
-                        </a>
-                        
-                    </div>
                     
                 </div>
             </div>
@@ -432,7 +419,7 @@
             <div class="post-info">
                 <div class="post-date info-break-policy">
                     <i class="fa fa-calendar-minus-o fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2018-01-22
+                    2020-01-18
                 </div>
 
                 <div class="post-author info-break-policy">
@@ -446,14 +433,14 @@
                 
                 <div class="info-break-policy">
                     <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.4k
+                    0
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    5 分
+                    1 分
                 </div>
                 
                 
@@ -469,26 +456,7 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h4 id="一：如何确定设计分辨率？"><a href="#一：如何确定设计分辨率？" class="headerlink" title="一：如何确定设计分辨率？"></a>一：如何确定设计分辨率？</h4><p>设计分辨率的制定主要需要考虑市场主流机型，美术画质要求,  设计资源占用的内存；根据Tecent移动统计, 2019.12月份Android和IOS的主流机型的物理分辨率如图所示</p>
-<p><img src="1.png" alt="IOS"><br><img src="2.png" alt="Android"><br> |  图一   |  最小分辨率   |  最大分辨率为               |  最小宽阔比   |  最大宽阔比<br> |  Nil      |   1334 <em> 750   | 2668 </em> 1242(XSMAX)   |  16:9              | 19.5: 9(IPHONE X)<br> |  图二   |  1280 <em> 750    |  2400 </em> 1176(P30Pro)   | 15.36 * 9       | 19:9(三星S10)    </p>
-<p>从上图看主流机型分辨率主要分布在(1280, 720) ~ (2668, 1242)之间, 宽阔比主要分布在15:9到19.5:9之间,<br>所以分辨率和宽阔比是我们筛选的主要依据。目前开发游戏类型为MOBORPG横版，所以我们使用的适配<br>策略是高度充满，宽度动态适配的方式(UE4 DPIScale H模式)这种模式决定了宽阔比使用19.5:9, 在不考虑DPIScale的情况，基本决定设计分辨率为IPHONEX的分辨率，但是这个设计分辨率太大了，美术精度是非<br>常饱和，但是占用的程序内存太大，于是我定了两种方式</p>
-<p>1.比较保守的方式，高度定位750, 那么可以计算750 / 1125(IPHONXHeight) , 求得DPI值0.667，经过在IPHONEXSMAX和IPHONEX上画质测试，可以满足策划和美术对画质的要求.</p>
-<p>2.比较激进的方式，高度定位1080, 那么可以计算 1080 / 1125(IPHONXHeight), 求得DPI值0.96，这个画<br>质肯定要比750的画质更加精细，尤其是在大分辨率手机上，但是如果200M的内存就会多出来40~60M<br>的内存，所以当下使用了比较保守的方式，设计分辨率定位1624 * 750</p>
-<h4 id="二：设计分辨率如何适配机型？"><a href="#二：设计分辨率如何适配机型？" class="headerlink" title="二：设计分辨率如何适配机型？"></a>二：设计分辨率如何适配机型？</h4><p><strong>1.刘海问题</strong><br><img src="3.png" alt="图层"><br>UMG分为2层，如图红色为UI安全区域和绿色为背景区域, 普通屏幕的Head区域没有遮挡，但继IPHONEX<br>出现刘海以后，就出现各种类似这种仿刘海的机型，所以避免刘海遮挡UI, 所以安全区域的层Margin需要保<br>证大于刘海的横屏宽度, 这个在Android和IOS 都有获取宽度的方式,当运行在无刘海的设备安全区域等于背<br>景区域，若有刘海则需要UI代码动态调整安全区域；</p>
-<p><strong>2.适配规则</strong><br><img src="4.png" alt="DPI Scaling"><br>因为当下使用的是UE4的引擎，UE4提供了DPIScaling的适配规则, 5种规则如下</p>
-<blockquote>
-<p>1.最短边       （ShortestSide）<br>该选项将基于窗口的最短边来评估缩放曲线.<br>2.最长边       （LongsetSide）<br>基于窗口的最长边来评估缩放曲线.<br>3.水平           （Horizontal）<br>基于窗口的 X 轴来评估缩放曲线.<br>4.垂直           （vertical）<br>基于窗口的 Y 轴来评估缩放曲线.<br>5.用户自定义（Custom）<br>用户自定义规则。最小曲线（SmallestCurve） -同时基于XY两个轴来评缩放曲线.</p>
-</blockquote>
-<p>本游戏的目标机型为IPHONEX所以在2436打点，Scale 设置为1, 1624打点，Scale设置为0.667,  你可以对<br>你感兴趣的分辨率打点，进行DPIScale配置，当然程序把这种规范告诉策划同学，让策划同学去打包修改成<br>他们期望的feel即可.本游戏使用的是水平方式，当水平方向水平宽度移动, UMG的Scale会随着DPICurve曲<br>线上的Scale点进行缩放。</p>
-<p><strong>3.UI布局方式</strong><br>锚点和ScaleBox的合理使用，保证在制作之前和美术沟通清楚，布局变化的时候锚点的动向，需要脑补在<br>同的设备下这个锚点会怎么变化. 当然如果不清楚，可以写一个最简单的Ui Demo去验证梳理想法.</p>
-<p>字体适配UE4DPI默认显示为96DPI, PSDPI默认图片显示为72DPI</p>
-<blockquote>
-<p>The font size is a measure in point values. The conversion of points to Slate Units is done at 96 dpi.<br>So if you’re using a tool like  Photoshop to prototype layouts and UI mock ups, be sure to change<br>thedefault dpi measurements from 72 dpi to 96 dpi.</p>
-</blockquote>
-<p>所以设置字体具体字号的方式：UE4_FontSize = PS_72DPI_FontSize * 72DPI/96DPI / UE4_96DPI_Scale</p>
-<p><strong>3.美术设计</strong><br>美术设计人员需要知晓当下屏幕适配的规则，对于复杂的界面在不同的宽阔比下，能够推想到UI布局是否<br>合理美观，如果一张设计图已经提交了程序这边，发现在宽阔比比较小的情况，会XXBug，那就尴尬了.</p>
-<p><strong>4.PAD</strong><br>当下开发的游戏只考虑15:9 到19.5:9的情况，美术可以保证布局在这宽阔比下能够正常的适配，那么小于<br>15:9的PAD(大概在12:9~15:9) 这个就需要依据具体的功能区PAD版本的UI布局设计，为了验证这个想法我<br>分辨使用PAD, IPHONE7P,IPHONEX运行王者荣耀，发现背包功能PAD上面做了PAD版本的UI布局设计，<br>这是针对布局比较复杂的界面而言. </p>
-<h4 id="三：总结"><a href="#三：总结" class="headerlink" title="三：总结"></a>三：总结</h4><p>适配没有最优的解决方案，根据游戏的类型确定好游戏适合哪种适配策略，在策略确定的情况下，保证程<br>序，美术, 策划同学都能理解适配的规则，各司其职，尤其是打点调整Scale值，这个程序可以让策划去调<br>节，打包验证，程序保证按照美术的设计合理的使用锚点，那么适配方案基本可以做的比较ok.</p>
+                <p><img src="1.png" alt="方法论认知 来源于@人神共奋"></p>
 
             </div>
             <hr />
@@ -647,9 +615,9 @@
             <br/>
             <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text"
                   property="dct:title" rel="dct:type">
-                    《UMG屏幕适配》
+                    《认知方法论》
                 </span> 由
-            <a xmlns:cc="http://creativecommons.org/ns#" href="/2018/01/22/ue01/" property="cc:attributionName"
+            <a xmlns:cc="http://creativecommons.org/ns#" href="/2020/01/18/theorydology/" property="cc:attributionName"
                rel="cc:attributionURL">
                 stars
             </a> 采用
@@ -690,7 +658,7 @@
         repo: 'alitalegend.github.io',
         owner: 'alitalegend',
         admin: "alitalegend",
-        id: '2018/01/22/ue01/',
+        id: '2020/01/18/theorydology/',
         distractionFreeMode: false  // Facebook-like distraction free mode
     });
 
@@ -973,9 +941,10 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="fa fa-dot-circle-o"></i>&nbsp;本篇
+            </div>
             <div class="card">
                 <a href="/2020/01/18/theorydology/">
                     <div class="card-image">
@@ -994,14 +963,15 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="fa fa-clock-o fa-fw icon-date"></i>2020-01-18
-                        </span>
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2020-01-18
+                            </span>
                         <span class="publish-author">
                             
                         </span>
                     </div>
                 </div>
+
                 
             </div>
         </div>
@@ -1009,7 +979,7 @@
         
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge right-badge text-color">
-                本篇&nbsp;<i class="fa fa-dot-circle-o"></i>
+                下一篇&nbsp;<i class="fa fa-chevron-right"></i>
             </div>
             <div class="card">
                 <a href="/2018/01/22/ue01/">
@@ -1044,7 +1014,6 @@
                         </span>
                     </div>
                 </div>
-
                 
                 <div class="card-action article-tags">
                     
@@ -1196,6 +1165,13 @@
 
 </main>
 
+
+<script src="https://cdn.bootcss.com/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script>
+    MathJax.Hub.Config({
+        tex2jax: {inlineMath: [['$', '$'], ['\(', '\)']]}
+    });
+</script>
 
     <footer class="page-footer bg-color">
     <div class="container row center-align">

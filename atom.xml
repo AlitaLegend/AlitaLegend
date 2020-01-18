@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://alitalegend.github.io/"/>
-  <updated>2019-12-31T15:47:46.110Z</updated>
+  <updated>2020-01-18T06:39:17.638Z</updated>
   <id>https://alitalegend.github.io/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>认知方法论</title>
+    <link href="https://alitalegend.github.io/2020/01/18/theorydology/"/>
+    <id>https://alitalegend.github.io/2020/01/18/theorydology/</id>
+    <published>2020-01-18T06:36:08.000Z</published>
+    <updated>2020-01-18T06:39:17.638Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;&lt;img src=&quot;1.png&quot; alt=&quot;方法论认知
+        
+      
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>UMG屏幕适配</title>
